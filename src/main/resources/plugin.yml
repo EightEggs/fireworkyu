@@ -5,3 +5,15 @@ api-version: 1.18
 authors: [ Eight_Eggs ]
 description: A spigot plugin setting fireworks under players.
 website: eighteggs.github.io
+
+commands:
+  firework:
+    aliases: [fw]
+    usage: /<command>
+    description: set a random firework
+    permission: fireworkyu.fw
+    permission-message: you are not allowed to use this command
+
+permissions:
+  fireworkyu.fw:
+    default: true
