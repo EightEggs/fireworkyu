@@ -1,0 +1,7 @@
+name: Fireworkyu
+version: '${version}'
+main: io.github.eighteggs.fireworkyu.FireworkyuMain
+api-version: 1.18
+authors: [ Eight_Eggs ]
+description: A spigot plugin setting fireworks under players.
+website: eighteggs.github.io
