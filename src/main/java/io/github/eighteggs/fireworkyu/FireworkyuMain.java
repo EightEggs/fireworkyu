@@ -2,6 +2,7 @@ package io.github.eighteggs.fireworkyu;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public final class FireworkyuMain extends JavaPlugin {
 
     @Override

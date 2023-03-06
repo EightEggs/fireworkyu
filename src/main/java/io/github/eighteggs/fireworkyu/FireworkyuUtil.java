@@ -9,23 +9,19 @@ import java.util.Random;
 
 
 public class FireworkyuUtil {
+    private static final Random r = new Random(114514);
+
     private FireworkyuUtil() {
         throw new IllegalStateException("Utility class");
     }
 
-    private static final Random r = new Random(114514);
-
     public static void buildFirework(FireworkEffect.Builder fb) {
-        fb.withColor(
-                Color.fromRGB(r.nextInt(156) + 100, r.nextInt(156) + 100, r.nextInt(156) + 100),
+        fb.withColor(Color.fromRGB(r.nextInt(156) + 100, r.nextInt(156) + 100, r.nextInt(156) + 100),
                 Color.fromRGB(r.nextInt(136) + 120, r.nextInt(136) + 120, r.nextInt(136) + 120),
                 Color.fromRGB(r.nextInt(116) + 140, r.nextInt(116) + 140, r.nextInt(116) + 140),
-                Color.fromRGB(r.nextInt(96) + 160, r.nextInt(96) + 160, r.nextInt(96) + 160)
-        );
-        fb.withFade(
-                Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255)),
-                Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255))
-        );
+                Color.fromRGB(r.nextInt(96) + 160, r.nextInt(96) + 160, r.nextInt(96) + 160));
+        fb.withFade(Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255)),
+                Color.fromRGB(r.nextInt(255), r.nextInt(255), r.nextInt(255)));
         FireworkEffect.Type[] type = FireworkEffect.Type.values();
         fb.with(type[r.nextInt(type.length)]);
         int t = r.nextInt(64);
@@ -38,7 +34,7 @@ public class FireworkyuUtil {
     }
 
     public static void setFirework(Location loc) {
-        if (Bukkit.getOnlinePlayers().isEmpty()||!loc.getChunk().isLoaded()) return;
+        if (Bukkit.getOnlinePlayers().isEmpty() || !loc.getChunk().isLoaded()) return;
 
         World world = Bukkit.getWorld("World");
 
